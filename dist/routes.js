@@ -8,6 +8,7 @@ class Routes {
         app.use('/', require('./components/index'));
         app.use('/calendar', require('./components/calendar'));
         app.use('/authorize', require('./components/authorize'));
+        app.use('/notifications', require('./components/notifications'));
     }
 }
 exports.default = Routes;

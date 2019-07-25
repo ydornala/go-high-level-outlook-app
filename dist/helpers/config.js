@@ -11,6 +11,13 @@ exports.default = {
             authorizePath: 'common/oauth2/v2.0/authorize',
             tokenPath: 'common/oauth2/v2.0/token'
         }
+    },
+    subcriptionRequest: {
+        changeType: "created,updated",
+        notificationUrl: "https://7681ed19.ngrok.io/notifications",
+        resource: "me/events",
+        expirationDateTime: "2019-07-27T23:10:51.282Z",
+        clientState: "goHighLevelSecretClient"
     }
 };
 //# sourceMappingURL=config.js.map

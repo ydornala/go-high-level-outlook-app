@@ -4,6 +4,8 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
+const http = require("http");
+const io = require("socket.io");
 const routes_1 = require("./routes");
 require('dotenv').config();
 class Server {
@@ -22,6 +24,12 @@ class Server {
         // Load Routes
         const routes = new routes_1.default(this.app);
     }
+    registerSocketio(app) {
+        const socketServer = http.createServer(app);
+        // socketServer.listen('3001');
+        return io(socketServer);
+    }
 }
 exports.default = new Server().app;
+exports.socketServer = new Server().socketServer;
 //# sourceMappingURL=server.js.map

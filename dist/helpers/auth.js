@@ -65,7 +65,7 @@ class auth {
     saveValuesToCookie(token, res) {
         const user = jwt.decode(token.token.id_token);
         res.cookie('graph_access_token', token.token.access_token, { maxAge: 3600000, httpOnly: true });
-        res.cookie('graph_user_name', user.name, { maxAge: 3600000, httpOnly: true });
+        res.cookie('graph_username', user.name, { maxAge: 3600000, httpOnly: true });
         // Save the refresh token in a cookie
         res.cookie('graph_refresh_token', token.token.refresh_token, { maxAge: 7200000, httpOnly: true });
         // Save the token expiration time in a cookie
