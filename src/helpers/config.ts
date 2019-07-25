@@ -12,7 +12,7 @@ export default {
     },
     subcriptionRequest: {
         changeType: "created,updated",
-        notificationUrl: "https://7681ed19.ngrok.io/notifications",
+        notificationUrl: "https://go-high-level-app.herokuapp.com/notifications",
         resource: "me/events",
         expirationDateTime: "2019-07-27T23:10:51.282Z",
         clientState: "goHighLevelSecretClient"

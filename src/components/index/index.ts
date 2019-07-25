@@ -26,12 +26,6 @@ router.get('/', async function(req, res) {
         socket.on('connection', (con) => {
             console.log('Socket IO connected...');
             
-            con.on('message', async (data) => {
-                console.log('DATA', data);
-                
-                http.get('http://localhost:3001/calendar', r => {});
-            });
-
             con.emit('message', {d: 'data'});
         });
     
