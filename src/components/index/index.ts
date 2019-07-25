@@ -31,6 +31,8 @@ router.get('/', async function(req, res) {
                 
                 http.get('http://localhost:3001/calendar', r => {});
             });
+
+            con.emit('message', {d: 'data'});
         });
     
         try {            

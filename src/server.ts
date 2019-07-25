@@ -34,8 +34,6 @@ class Server {
 
         // Load Routes
         const routes = new Routes(this.app);
-
-        // this.socketServer = this.registerSocketio(this.app);
     }
 
     public registerSocketio(app) {
