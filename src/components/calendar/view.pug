@@ -1,0 +1,21 @@
+extend /layout
+block content
+    h2 Calendar
+    table.table
+        thead.thead-light
+            tr
+                th(scope='col') Subject
+                th(scope='col') Start
+                th(scope='col') End
+                th(scope='col') Attendees
+        tbody
+            each event in events
+                tr
+                    td= event.subject
+                    td= event.start.dateTime
+                    td= event.end.dateTime
+                    td
+                        ul.list-unstyled
+                            each attend in event.attendees
+                                li.border.p-1(title=attend.emailAddress.address)
+                                    = attend.emailAddress.name

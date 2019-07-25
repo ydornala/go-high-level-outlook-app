@@ -1,0 +1,32 @@
+{
+  "name": "go-highlevel-app",
+  "version": "1.0.0",
+  "description": "Go High Level Outlook App in TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsnd --respawn ./src/app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yeshwanth Dornala",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/cookie-parser": "^1.4.1",
+    "@types/errorhandler": "0.0.32",
+    "@types/express": "^4.17.0",
+    "ts-node-dev": "^1.0.0-pre.40"
+  },
+  "dependencies": {
+    "@microsoft/microsoft-graph-client": "^1.7.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^8.0.0",
+    "errorhandler": "^1.5.1",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "pug": "^2.0.4",
+    "simple-oauth2": "^2.2.1",
+    "socket.io": "^2.2.0",
+    "socket.io-client": "^2.2.0"
+  }
+}

@@ -1,0 +1,9 @@
+extend /layout
+block content
+    // Debug output
+    if debug
+        .card
+            .card-body
+                h5.card-title Debug
+                pre.bg-light.border.p-3
+                    code #{debug}
