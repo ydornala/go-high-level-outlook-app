@@ -8,6 +8,7 @@
     "build": "tsc",
     "preinstall": "npm i -g typescript",
     "postinstall": "npm run build",
+    "start": "node ./dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"    
   },
   "author": "Yeshwanth Dornala",
@@ -34,6 +35,7 @@
     "socket.io-client": "^2.2.0"
   },
   "engines": {
-    "node": "10.15.3"
+    "node": "10.15.3",
+    "npm": "6.9.0"
   }
 }
