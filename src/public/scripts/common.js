@@ -1,4 +1,4 @@
-var socket = io.connect('http://localhost:3001');
+var socket = io.connect('https://go-high-level-app.herokuapp.com');
 
 socket.on('message', (data) => {
     new Noty({
