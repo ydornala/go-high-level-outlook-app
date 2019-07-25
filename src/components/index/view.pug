@@ -1,5 +1,9 @@
 extend /layout
 block content
+    if user
+        h3 Welcome #{user}
+    else 
+        h4 Sign In to View Calendar Events
     // Debug output
     if debug
         .card
