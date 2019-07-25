@@ -1,6 +1,6 @@
 {
   "name": "go-highlevel-app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Go High Level Outlook App in TypeScript",
   "main": "dist/app.js",
   "scripts": {
