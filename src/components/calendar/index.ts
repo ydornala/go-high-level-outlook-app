@@ -44,7 +44,7 @@ const getCalendarEvents = async (client) => {
     const end = new Date(new Date(start).setDate(start.getDate() + 7));
 
     const result = await client
-        .api(`/me/calendarView/delta?startDateTime=${start.toISOString()}&endDateTime=${end.toISOString()}`)
+        .api(`/me/calendarView?startDateTime=${start.toISOString()}&endDateTime=${end.toISOString()}`)
         .header('Prefer', 'odata.maxpagesize=99')
         .get();
 
