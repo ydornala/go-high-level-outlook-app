@@ -44,7 +44,11 @@ router.post('/', (req, res) => {
             });
 
             if(clientStateValid) {
-                socket.emit('message', {message: 'Socket IO mesage received...'});
+                const username = auth.getUsername();
+                                
+                if(username) {
+                    socket.to(username.replace(/ /g,'')).emit('message', {message: 'Socket IO mesage received...'});
+                }
             }
     }
 });

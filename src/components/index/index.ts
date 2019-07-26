@@ -26,7 +26,8 @@ router.get('/', async function(req, res) {
         socket.on('connection', (con) => {
             console.log('Socket IO connected...');
             
-            con.emit('message', {d: 'data'});
+            con.join(username.replace(/ /g,''));
+            // con.emit('message', {d: 'data'});
         });
     
         try {            

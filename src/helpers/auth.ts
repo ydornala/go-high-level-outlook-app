@@ -5,6 +5,8 @@ import * as simpleOauth2 from 'simple-oauth2';
 class auth {
     public oauth2;
 
+    public username;
+
     constructor() {
         this.oauth2 = require('simple-oauth2').create(config.credentials);
     }
@@ -18,6 +20,10 @@ class auth {
         console.log('Auth URL', returnUrl);
 
         return returnUrl;
+    }
+
+    getUsername() {
+        return this.username;
     }
 
     public async getAccessToken(cookies, res) {
@@ -75,6 +81,8 @@ class auth {
         res.cookie('graph_refresh_token', token.token.refresh_token, { maxAge: 7200000, httpOnly: true });
         // Save the token expiration time in a cookie
         res.cookie('graph_token_expires', token.token.expires_at.getTime(), { maxAge: 3600000, httpOnly: true });
+
+        this.username = user.name;
     }
 
     public clearCookies(res) {
@@ -82,6 +90,8 @@ class auth {
         res.clearCookie('graph_user_name', {maxAge: 3600000, httpOnly: true});
         res.clearCookie('graph_refresh_token', {maxAge: 7200000, httpOnly: true});
         res.clearCookie('graph_token_expires', {maxAge: 3600000, httpOnly: true});
+
+        this.username = null;
     }
 }
 
